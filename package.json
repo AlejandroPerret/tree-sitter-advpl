@@ -1,0 +1,21 @@
+{
+  "name": "tree-sitter-advpl",
+  "version": "0.1.0",
+  "description": "Grammar Tree-sitter minimo para AdvPL/TLPP (TOTVS Protheus), usado por la extension de Zed",
+  "main": "bindings/node",
+  "keywords": [
+    "parser",
+    "lexer",
+    "advpl",
+    "tlpp",
+    "totvs",
+    "protheus"
+  ],
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.24.0"
+  }
+}
