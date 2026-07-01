@@ -1,9 +1,35 @@
 [
   {
+    "type": "call_expression",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "class_definition",
     "named": true,
     "fields": {
       "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "parent": {
         "multiple": false,
         "required": false,
         "types": [
@@ -17,6 +43,42 @@
   },
   {
     "type": "function_definition",
+    "named": true,
+    "fields": {
+      "keyword": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "function_keyword",
+            "named": true
+          }
+        ]
+      },
+      "modifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "function_modifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "method_definition",
     "named": true,
     "fields": {
       "name": {
@@ -41,11 +103,23 @@
       "required": false,
       "types": [
         {
+          "type": "boolean",
+          "named": true
+        },
+        {
+          "type": "call_expression",
+          "named": true
+        },
+        {
           "type": "class_definition",
           "named": true
         },
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "control_flow",
           "named": true
         },
         {
@@ -57,7 +131,11 @@
           "named": true
         },
         {
-          "type": "keyword_statement",
+          "type": "method_definition",
+          "named": true
+        },
+        {
+          "type": "nil",
           "named": true
         },
         {
@@ -79,12 +157,102 @@
         {
           "type": "string",
           "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "wsmethod_definition",
+          "named": true
+        },
+        {
+          "type": "wsservice_definition",
+          "named": true
         }
       ]
     }
   },
   {
+    "type": "variable_declaration",
+    "named": true,
+    "fields": {
+      "keyword": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "variable_keyword",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "wsmethod_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "wsservice_definition",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": "boolean",
+    "named": true
+  },
+  {
     "type": "comment",
+    "named": true
+  },
+  {
+    "type": "control_flow",
+    "named": true
+  },
+  {
+    "type": "function_keyword",
+    "named": true
+  },
+  {
+    "type": "function_modifier",
     "named": true
   },
   {
@@ -92,7 +260,7 @@
     "named": true
   },
   {
-    "type": "keyword_statement",
+    "type": "nil",
     "named": true
   },
   {
@@ -113,6 +281,10 @@
   },
   {
     "type": "string",
+    "named": true
+  },
+  {
+    "type": "variable_keyword",
     "named": true
   }
 ]
